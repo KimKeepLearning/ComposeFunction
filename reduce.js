@@ -17,7 +17,7 @@ function pipe(funcs) {
 
 function add4(num) {
   return num + 4
-}  
+}
 
 function multiply3(num) {
   return num*3
