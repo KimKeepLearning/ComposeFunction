@@ -8,15 +8,23 @@ importers:
 
   .:
     dependencies:
+      immer:
+        specifier: ^9.0.21
+        version: 9.0.21
       ramda:
         specifier: ^0.32.0
         version: 0.32.0
 
 packages:
 
+  immer@9.0.21:
+    resolution: {integrity: sha512-bc4NBHqOqSfRW7POMkHd51LvClaeMXpm8dx0e8oE2GORbq5aRK7Bxl4FyzVLdGtLmvLKL7BTDBG5ACQm4HWjTA==}
+
   ramda@0.32.0:
     resolution: {integrity: sha512-GQWAHhxhxWBWA8oIBr1XahFVjQ9Fic6MK9ikijfd4TZHfE2+urfk+irVlR5VOn48uwMgM+loRRBJd6Yjsbc0zQ==}
 
 snapshots:
+
+  immer@9.0.21: {}
 
   ramda@0.32.0: {}
