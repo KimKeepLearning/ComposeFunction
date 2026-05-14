@@ -105,3 +105,18 @@ zoltar({birthdate: '2005-12-12'});
 zoltar({birthdate: 'balloons!'});
 // "Birth date could not be parsed"
 // undefined
+
+// ====================================================
+// 3. IO functor
+// 一个带有副作用的操作，如果用函数包裹并返回，就变成了纯函数，受此启发出现了IO functor，代表了一个有副作用的操作，或者说一个需要和外界交互的操作
+var IO = function (f) {
+  this.__value = f;
+}
+
+IO.of = function(x) {
+  return new IO(function() { return x; })
+}
+
+IO.prototype.map = function (f) {
+  return new IO(_.compose(f, this.__value))
+}
